@@ -6,3 +6,4 @@ port = int(os.environ.get('PORT', 5000))
 heroku addons:create heroku-postgresql:hobby-dev
 heroku container:release "コンテナ名"
 heroku open
+web  gunicorn --pythonpath mysite2 mysite2.wsgi 
